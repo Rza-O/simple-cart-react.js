@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+    "description": "Experience high-quality sound with these wireless Bluetooth headphones, featuring noise-cancellation and long battery life.",
+    "price": 49.99,
+    "category": "Electronics",
+    "isFeature": true
+  },
+  {
+    "id": 2,
+    "name": "Modern Office Chair",
+    "image": "https://images.secretlab.co/theme/common/features-2020-gallery-01-01-min.jpg",
+    "description": "Ergonomic office chair with adjustable height, armrests, and lumbar support for all-day comfort.",
+    "price": 119.99,
+    "category": "Furniture",
+    "isFeature": false
+  },
+  {
+    "id": 3,
+    "name": "Stainless Steel Water Bottle",
+    "image": "https://images-cdn.ubuy.ae/667d15bc1a35ea2fac1939b0-bjpkpk-stainless-steel-water-bottles.jpg",
+    "description": "Keep your drinks cold or hot for hours with this double-wall insulated stainless steel water bottle.",
+    "price": 24.99,
+    "category": "Accessories",
+    "isFeature": true
+  },
+  {
+    "id": 4,
+    "name": "Gaming Mouse",
+    "image": "https://m.media-amazon.com/images/I/61wQNtMZHgL._AC_SL1500_.jpg",
+    "description": "Precision gaming mouse with customizable buttons and RGB lighting for a competitive edge in gaming.",
+    "price": 29.99,
+    "category": "Electronics",
+    "isFeature": false
+  },
+  {
+    "id": 5,
+    "name": "Yoga Mat",
+    "image": "https://www.medistorebd.com/wp-content/uploads/2024/01/how-to-clean-yoga-mat-getty-0623-1fda4b0532ea4f9787d5f248bbedaf8d.jpg",
+    "description": "Eco-friendly non-slip yoga mat, perfect for yoga, pilates, or any workout routine.",
+    "price": 19.99,
+    "category": "Fitness",
+    "isFeature": false
+  },
+  {
+    "id": 6,
+    "name": "LED Desk Lamp",
+    "image": "https://m.media-amazon.com/images/I/51JpJ6J-5XL._AC_.jpg",
+    "description": "Energy-efficient LED desk lamp with adjustable brightness and color temperature settings.",
+    "price": 39.99,
+    "category": "Home Decor",
+    "isFeature": true
+  }
+]
