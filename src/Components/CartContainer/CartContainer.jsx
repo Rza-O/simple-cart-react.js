@@ -8,7 +8,7 @@ const CartContainer = ({ handleIsActiveState, isActive }) => {
     // console.log(isActive);
     return (
         <div>
-            <h1 className="text-4xl font-bold">Cart Container.JSX</h1>
+            <h1 className="text-4xl font-bold">Cart Container</h1>
             <div className="flex justify-around mt-4">
 
                 <button onClick={() => handleIsActiveState('cart')} 

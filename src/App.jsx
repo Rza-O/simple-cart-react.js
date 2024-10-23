@@ -38,12 +38,34 @@ function App() {
 
   // console.log(isActive);
 
+
+  const [selectedProducts, setSelectedProducts] = useState([]);
+
+  const handleSelectedProduct = (product) => {
+    const isExist = selectedProducts.find((p)=> p.id == product.id);
+    if(isExist){
+      alert('Already Added')
+    }
+    else{
+      const newProducts = [...selectedProducts, product];
+      setSelectedProducts(newProducts);
+    }
+    
+  }
+
+  console.log(selectedProducts);
+
+
+
+
+
+
   return (
     <>
       <Navbar></Navbar>
 
       <div className='flex justify-between w-11/12 mx-auto mt-6'>
-        <AllProducts></AllProducts>
+        <AllProducts handleSelectedProduct={handleSelectedProduct}></AllProducts>
         
         <CartContainer isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
       </div>
