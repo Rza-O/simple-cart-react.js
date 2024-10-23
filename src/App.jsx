@@ -62,12 +62,12 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar selectedProducts={selectedProducts}></Navbar>
 
       <div className='flex justify-between w-11/12 mx-auto mt-6'>
         <AllProducts handleSelectedProduct={handleSelectedProduct}></AllProducts>
         
-        <CartContainer isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
+        <CartContainer selectedProducts={selectedProducts} isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
       </div>
     </>
   )

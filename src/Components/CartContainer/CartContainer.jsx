@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import './CartContainer.css'
 import PropTypes from 'prop-types';
 
-const CartContainer = ({ handleIsActiveState, isActive }) => {
+const CartContainer = ({ handleIsActiveState, isActive, selectedProducts }) => {
     // console.log(handleIsActiveState);
     // console.log(isActive);
     return (
@@ -12,18 +12,19 @@ const CartContainer = ({ handleIsActiveState, isActive }) => {
             <div className="flex justify-around mt-4">
 
                 <button onClick={() => handleIsActiveState('cart')} 
-                    className={`${isActive ? 'font-bold p-4 bg-yellow-200 text-gray-700' : 'font-bold p-4'}`} >Cart</button>
+                    className={`${isActive ? 'font-bold p-4 bg-yellow-200 text-gray-700 rounded-lg' : 'font-bold p-4'}`} >Cart</button>
                 
-                <button onClick={() => handleIsActiveState('about')} className={`${isActive ? 'font-bold p-4' : 'font-bold p-4 bg-yellow-200 text-gray-700'}`}>About</button>
+                <button onClick={() => handleIsActiveState('about')} className={`${isActive ? 'font-bold p-4' : 'font-bold p-4 bg-yellow-200 text-gray-700 rounded-lg'}`}>About</button>
             </div>
-            {isActive? <Cart></Cart> : <About></About>}
+            {isActive ? <Cart selectedProducts={selectedProducts}></Cart> : <About></About>}
         </div>
     );
 };
 
 CartContainer.propTypes = {
     handleIsActiveState: PropTypes.func,
-    isActive: PropTypes.func
+    isActive: PropTypes.func,
+    selectedProducts: PropTypes.array
 };
 
 export default CartContainer;
