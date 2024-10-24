@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import './CartContainer.css'
 import PropTypes from 'prop-types';
 
-const CartContainer = ({ handleIsActiveState, isActive, selectedProducts }) => {
+const CartContainer = ({ handleIsActiveState, isActive, selectedProducts, handleDelete }) => {
     // console.log(handleIsActiveState);
     // console.log(isActive);
     return (
@@ -16,7 +16,7 @@ const CartContainer = ({ handleIsActiveState, isActive, selectedProducts }) => {
                 
                 <button onClick={() => handleIsActiveState('about')} className={`${isActive ? 'font-bold p-4' : 'font-bold p-4 bg-yellow-200 text-gray-700 rounded-lg'}`}>About</button>
             </div>
-            {isActive ? <Cart selectedProducts={selectedProducts}></Cart> : <About></About>}
+            {isActive ? <Cart handleDelete={handleDelete} selectedProducts={selectedProducts}></Cart> : <About></About>}
         </div>
     );
 };
@@ -24,7 +24,8 @@ const CartContainer = ({ handleIsActiveState, isActive, selectedProducts }) => {
 CartContainer.propTypes = {
     handleIsActiveState: PropTypes.func,
     isActive: PropTypes.func,
-    selectedProducts: PropTypes.array
+    selectedProducts: PropTypes.array,
+    handleDelete: PropTypes.func
 };
 
 export default CartContainer;

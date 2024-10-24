@@ -53,7 +53,12 @@ function App() {
     
   }
 
-  console.log(selectedProducts);
+  // console.log(selectedProducts);
+
+  const handleDelete = (id) => {
+    const remainingProducts = selectedProducts.filter((p)=> p.id !== id);
+    setSelectedProducts(remainingProducts);
+  }
 
 
 
@@ -67,7 +72,7 @@ function App() {
       <div className='flex justify-between w-11/12 mx-auto mt-6'>
         <AllProducts handleSelectedProduct={handleSelectedProduct}></AllProducts>
         
-        <CartContainer selectedProducts={selectedProducts} isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
+        <CartContainer handleDelete={handleDelete} selectedProducts={selectedProducts} isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
       </div>
     </>
   )

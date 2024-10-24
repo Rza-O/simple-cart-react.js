@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Cart = ({ selectedProducts }) => {
+const Cart = ({ selectedProducts, handleDelete }) => {
     // console.log(selectedProducts);
     return (
         <div>
@@ -11,7 +11,7 @@ const Cart = ({ selectedProducts }) => {
                         <img className='w-14 h-12' src={product.image} alt="" />
                         <p>{product.name}</p>
                         <p>{product.price}</p>
-                        <button className='btn border border-yellow-400 bg-yellow-200 p-2 text-sm font-medium'>Delete</button>
+                            <button onClick={()=> handleDelete(product.id)} className='btn border border-yellow-400 bg-yellow-200 p-2 text-sm font-medium'>Delete</button>
                     </div>
                 </div>)
             }
@@ -20,7 +20,8 @@ const Cart = ({ selectedProducts }) => {
 };
 
 Cart.propTypes = {
-    selectedProducts: PropTypes.array
+    selectedProducts: PropTypes.array,
+    handleDelete: PropTypes.func
 }
 
 export default Cart;
