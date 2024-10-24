@@ -47,6 +47,7 @@ function App() {
       alert('Already Added')
     }
     else{
+      handleIncreasePrice(product.price)
       const newProducts = [...selectedProducts, product];
       setSelectedProducts(newProducts);
     }
@@ -56,18 +57,28 @@ function App() {
   // console.log(selectedProducts);
 
   const handleDelete = (id) => {
+    handleDecreasePrice(id);
     const remainingProducts = selectedProducts.filter((p)=> p.id !== id);
     setSelectedProducts(remainingProducts);
   }
 
 
+  const [price, setPrice] = useState(500);
 
+  const handleIncreasePrice = (pr) => {
+    setPrice(price + pr)
+  }
+
+  const handleDecreasePrice =(id) => {
+    const product = selectedProducts.find(p=> p.id == id);
+    setPrice(price - product.price)
+  }
 
 
 
   return (
     <>
-      <Navbar selectedProducts={selectedProducts}></Navbar>
+      <Navbar price={price} selectedProducts={selectedProducts}></Navbar>
 
       <div className='flex justify-between w-11/12 mx-auto mt-6'>
         <AllProducts handleSelectedProduct={handleSelectedProduct}></AllProducts>
